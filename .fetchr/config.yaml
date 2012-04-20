@@ -1,0 +1,7 @@
+files:
+  - name: underscore
+    url: 'http://underscorejs.org/underscore-min.js'
+  - name: backbone
+    url: 'http://documentcloud.github.com/backbone/backbone-min.js'
+  - name: hogan
+    url: 'http://twitter.github.com/hogan.js/builds/2.0.0/hogan-2.0.0.js'
