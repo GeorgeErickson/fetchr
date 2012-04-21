@@ -1,7 +1,12 @@
-files:
-  - name: underscore
-    url: 'http://underscorejs.org/underscore-min.js'
-  - name: backbone
-    url: 'http://documentcloud.github.com/backbone/backbone-min.js'
-  - name: hogan
-    url: 'http://twitter.github.com/hogan.js/builds/2.0.0/hogan-2.0.0.js'
+underscore: 
+  file_name: underscore-min.js
+  url: 'http://underscorejs.org/underscore-min.js'
+backbone: 
+  file_name: backbone-min.js
+  url: 'http://documentcloud.github.com/backbone/backbone-min.js'
+hogan:
+  file_name: hogan-2.0.0.js
+  url: 'http://twitter.github.com/hogan.js/builds/2.0.0/hogan-2.0.0.js'
+jquery:
+  file_name: jquery-1.7.2.min.js
+  url: 'http://code.jquery.com/jquery-1.7.2.min.js'
