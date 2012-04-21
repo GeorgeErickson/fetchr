@@ -4,8 +4,8 @@
 import os
 import sys
 import shutil
-import requests
 
+import requests
 import clint
 from clint.textui import puts, colored, indent
 import yaml
