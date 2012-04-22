@@ -1,3 +1,1 @@
-include .gitignore
-include fetchr.py
-recursive-include .fetchr *
+recursive-include data *

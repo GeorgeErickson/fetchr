@@ -14,11 +14,11 @@ import yaml
 sys.path.insert(0, os.path.abspath('..'))
 
 def get_or_create_dotfile():
-    resources.init('George Erickson', 'fetchr') 
+    resources.init('George Erickson', 'fetchr')
     config = resources.user.read('config.yaml')
-    print resources.user.path
     if not config:
-        config = pkgutil.get_data('fetchr', '.fetchr/config.yaml')
+        config = pkgutil.get_data('fetchr', 'data/config.yaml')
+        print config
         resources.user.write('config.yaml', config)
     try:
         return yaml.load(config)
