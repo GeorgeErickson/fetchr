@@ -3,28 +3,23 @@
 
 import os
 import sys
-import shutil
+import pkgutil
 
 import requests
 import clint
 from clint.textui import puts, colored, indent
+from clint import resources
 import yaml
 
 sys.path.insert(0, os.path.abspath('..'))
 
 def get_or_create_dotfile():
-    home_path = os.path.expanduser('~/')
-    dotfile_path = os.path.join(home_path, '.fetchr')
-    config_path = os.path.join(dotfile_path, 'config.yaml')
-    default_dotfile_path = os.path.abspath('.fetchr')
-    
-    #can't find the config file so create it
-    if not os.path.exists(config_path):
-        shutil.copytree(default_dotfile_path, dotfile_path)
-    
-    with open(config_path) as config_file:
-        config = config_file.read()
-    
+    resources.init('George Erickson', 'fetchr') 
+    config = resources.user.read('config.yaml')
+    print resources.user.path
+    if not config:
+        config = pkgutil.get_data('fetchr', '.fetchr/config.yaml')
+        resources.user.write('config.yaml', config)
     try:
         return yaml.load(config)
     except yaml.parser.ParserError as e:
