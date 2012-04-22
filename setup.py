@@ -7,7 +7,7 @@ from setuptools import setup, find_packages
 with open('requirements.txt') as requirements:
     requires = map(lambda r: r.strip(), requirements.readlines())
 
-version = '0.0.0'
+version = '0.0.1'
 
 dist = setup(
     name = 'fetchr',
