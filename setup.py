@@ -3,11 +3,9 @@ import sys
 import fetchr
 from setuptools import setup, find_packages
 
-#dynamically read dependencies from file
-with open('requirements.txt') as requirements:
-    requires = map(lambda r: r.strip(), requirements.readlines())
+requires = ['clint', 'requests', 'PyYaml']
 
-version = '0.0.1'
+version = '0.0.3'
 
 dist = setup(
     name = 'fetchr',
